@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <button class="btn btn-danger" routerLink="/frontcrud"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                  </svg>
+                Add Company
+            </button>
+
+        </div>
+    </div>    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>DomainName</th>
+                <th>CompanyName</th>
+                <th>CompanyOwner</th>
+                <th>CompanyIndustry</th>
+                <th>HeadCount</th>
+                <th>AnnualRevenue</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>PostalCode</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let item of lstitems; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{item.domainName}}</td>
+                <td>{{item.companyName}}</td>
+                <td>{{item.companyOwner}}</td>
+                <td>{{item.companyIndustry}}</td>
+                <td>{{item.headCount}}</td>
+                <td>{{item.annualRevenue}}</td>
+                <td>{{item.city}}</td>
+                <td>{{item.state}}</td>
+                <td>{{item.country}}</td>
+                <td>{{item.postalCode}}</td>
+                <td>
+                    <span (click)="deleteReason(item.id)" class="fa fa-trash" style="color: red;">
+                        <span class="material-symbols-outlined">
+                        delete
+                        </span>
+                    </span> 
+                    <a [routerLink]="url" [queryParams]="{id: item.id}" class="fa fa-edit" style="color: gray;">
+                        <span class="material-symbols-outlined">
+                        edit
+                        </span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,112 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            Company
+        </div>
+        <div class="card-body">
+            <form [formGroup]="formmethod" (ngSubmit)="AddCompany()">
+                <div class="row">
+                    <div class="col-md-2 mt-4">
+                        <label class="form-label">Id</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" formControlName="Id" style="border: 1px solid black;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mt-4">
+                        <label class="form-label">DomainName</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" formControlName="DomainName" style="border: 1px solid black;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mt-4">
+                        <label class="form-label">CompanyName</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" formControlName="companyName" style="border: 1px solid black;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mt-4">
+                        <label class="form-label">CompanyOwner</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" formControlName="CompanyOwner" style="border: 1px solid black;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mt-4">
+                        <label class="form-label">CompanyIndustry</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" formControlName="CompanyIndustry" style="border: 1px solid black;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mt-4">
+                        <label class="form-label">HeadCount</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="number" class="form-control" formControlName="HeadCount" style="border: 1px solid black;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mt-4">
+                        <label class="form-label">AnnualRevenue</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" formControlName="AnnualRevenue" style="border: 1px solid black;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mt-4">
+                        <label class="form-label">City</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" formControlName="City" style="border: 1px solid black;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mt-4">
+                        <label class="form-label">State</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" formControlName="State" style="border: 1px solid black;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mt-4">
+                        <label class="form-label">Country</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" formControlName="Country" style="border: 1px solid black;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 mt-4">
+                        <label class="form-label">PostalCode</label>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" formControlName="PostalCode" style="border: 1px solid black;">
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-1">
+                      <input type="submit" class="btn btn-primary" value="SUBMIT" [disabled]="isdisabled">
+                    </div>
+                    <div class="col-md-1">
+                      <input type="button" class="btn btn-success" value="UPDATE" (click)="AddCompany()" [disabled]="isdisabled">
+                    </div>
+                    <div class="col-md-1">
+                      <input type="button" class="btn btn-danger" routerLink="/company-list" value="CANCEL" [disabled]="isdisabled">
+                    </div>
+                  </div>
+                  
+            </form>
+        </div>
+    </div>
+</div>
