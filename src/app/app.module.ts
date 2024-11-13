@@ -7,14 +7,14 @@ import { AppComponent } from './app.component';
 import { FrontcrudComponent } from './frontcrud/frontcrud.component';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { AdminStateComponent } from './admin-state/admin-state.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FrontcrudComponent,
     CompanyListComponent,
-    AdminStateComponent,
+
 
   ],
   imports: [
